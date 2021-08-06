@@ -1,0 +1,727 @@
+	aName = " Version:0.0.1"
+
+	print("Arsenal Blox Fruit Gui"..aName)
+	--[[People ask me why I keep
+	using local for my variables.
+	It's to make the script run light faster,
+	according to some people.]]
+
+	local UserInputService = game:GetService("UserInputService")
+	local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local ScrollingFrame = Instance.new("ScrollingFrame")
+	local Title = Instance.new("TextLabel")
+	local TextLabel = Instance.new("TextLabel")
+	local TextLabel2 = Instance.new("TextLabel")
+	local townIsland = Instance.new("TextButton")
+	local pirateIsland = Instance.new("TextButton")
+	local desertIsland = Instance.new("TextButton")
+	local snowIsland = Instance.new("TextButton")
+	local marineBaseIsland = Instance.new("TextButton")
+	local skyIsland = Instance.new("TextButton")
+	local prisonIsland = Instance.new("TextButton")
+	local magmaIsland = Instance.new("TextButton")
+	local fishmenIsland = Instance.new("TextButton")
+	local fountainIsland = Instance.new("TextButton")
+	local jungleIsland = Instance.new("TextButton")
+	local banditAdventurer = Instance.new("TextButton")
+	local jungleAdventurer = Instance.new("TextButton")
+	local pirateAdventurer = Instance.new("TextButton")
+	local desertAdventurer = Instance.new("TextButton")
+	local snowAdventurer = Instance.new("TextButton")
+	local marinebaseAdventurer = Instance.new("TextButton")
+	local skyAdventurer = Instance.new("TextButton")
+	local colesseumAdventurer = Instance.new("TextButton")
+	local magmaAdventurer = Instance.new("TextButton")
+	local prisonAdventurer = Instance.new("TextButton")
+	local mobBossAdventurer = Instance.new("TextButton")
+	local fountainAdventurer = Instance.new("TextButton")
+	local TextLabel3 = Instance.new("TextLabel")
+	local banditNPC = Instance.new("TextButton")
+	local monkeyNPC = Instance.new("TextButton")
+	local gorillaNPC = Instance.new("TextButton")
+	local pirateNPC = Instance.new("TextButton")
+	local bruteNPC = Instance.new("TextButton")
+	local desertBanditNPC = Instance.new("TextButton")
+	local desertOffficerNPC = Instance.new("TextButton")
+	local skyBanditNPC = Instance.new("TextButton")
+	local darkMasterNPC = Instance.new("TextButton")
+	local togaWarriorNPC = Instance.new("TextButton")
+	local gladiatorNPC = Instance.new("TextButton")
+	local militarySoldierNPC = Instance.new("TextButton")
+	local militarySpyNPC = Instance.new("TextButton")
+	local godsGuardNPC = Instance.new("TextButton")
+	local shandaNPC = Instance.new("TextButton")
+	local galleyPirateNPC = Instance.new("TextButton")
+
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	ScrollingFrame.Parent = ScreenGui
+	ScrollingFrame.Active = true
+	ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	ScrollingFrame.Position = UDim2.new(0.85577637, 0, 0.0770754591, 0)
+	ScrollingFrame.Size = UDim2.new(0, 195, 0, 519)
+	ScrollingFrame.CanvasSize = UDim2.new(0, 800, 2, 2000)
+	ScrollingFrame.ScrollBarThickness = 9
+	ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+	ScrollingFrame.Draggable = true
+
+	Title.Name = "Title"
+	Title.Parent = ScrollingFrame
+	Title.BackgroundColor3 = Color3.fromRGB(94, 62, 0)
+	Title.Size = UDim2.new(0, 200, 0, 18)
+	Title.Font = Enum.Font.SourceSans
+	Title.Text = "Warrior Arsenal Blox Fruit Gui"
+	Title.TextColor3 = Color3.fromRGB(255, 255, 0)
+	Title.TextScaled = true
+	Title.TextSize = 14.000
+	Title.TextWrapped = true
+	Title.Draggable = true
+
+	TextLabel.Parent = ScrollingFrame
+	TextLabel.BackgroundColor3 = Color3.fromRGB(200, 255, 110)
+	TextLabel.Position = UDim2.new(0.0461538471, 0, 0.0084952265, 0)
+	TextLabel.Size = UDim2.new(0, 180, 0, 16)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.Text = "Islands"
+	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.TextSize = 14.000
+
+	TextLabel2.Name = "TextLabel2"
+	TextLabel2.Parent = ScrollingFrame
+	TextLabel2.BackgroundColor3 = Color3.fromRGB(200, 255, 110)
+	TextLabel2.Position = UDim2.new(0.548717916, 0, 0.0084951967, 0)
+	TextLabel2.Size = UDim2.new(0, 180, 0, 16)
+	TextLabel2.Font = Enum.Font.SourceSans
+	TextLabel2.Text = "Adventurers"
+	TextLabel2.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel2.TextSize = 14.000
+
+	townIsland.Name = "townIsland"
+	townIsland.Parent = ScrollingFrame
+	townIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	townIsland.Position = UDim2.new(0.0564102568, 0, 0.0164115168, 0)
+	townIsland.Size = UDim2.new(0, 156, 0, 36)
+	townIsland.Font = Enum.Font.SourceSans
+	townIsland.Text = "Town"
+	townIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	townIsland.TextScaled = true
+	townIsland.TextSize = 26.000
+	townIsland.TextWrapped = true
+	townIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(972,16,1413)
+	end)
+
+
+	pirateIsland.Name = "pirateIsland"
+	pirateIsland.Parent = ScrollingFrame
+	pirateIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	pirateIsland.Position = UDim2.new(0.0564102568, 0, 0.0554023422, 0)
+	pirateIsland.Size = UDim2.new(0, 156, 0, 36)
+	pirateIsland.Font = Enum.Font.SourceSans
+	pirateIsland.Text = "Pirate"
+	pirateIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	pirateIsland.TextScaled = true
+	pirateIsland.TextSize = 26.000
+	pirateIsland.TextWrapped = true
+	pirateIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1187,4,3815)
+	end)
+
+
+	desertIsland.Name = "desertIsland"
+	desertIsland.Parent = ScrollingFrame
+	desertIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	desertIsland.Position = UDim2.new(0.051282052, 0, 0.0752800182, 0)
+	desertIsland.Size = UDim2.new(0, 156, 0, 36)
+	desertIsland.Font = Enum.Font.SourceSans
+	desertIsland.Text = "Desert"
+	desertIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	desertIsland.TextScaled = true
+	desertIsland.TextSize = 26.000
+	desertIsland.TextWrapped = true
+	desertIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(912,3,4112)
+	end)
+
+
+	snowIsland.Name = "snowIsland"
+	snowIsland.Parent = ScrollingFrame
+	snowIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	snowIsland.Position = UDim2.new(0.0564102605, 0, 0.0951576903, 0)
+	snowIsland.Size = UDim2.new(0, 156, 0, 36)
+	snowIsland.Font = Enum.Font.SourceSans
+	snowIsland.Text = "Snow"
+	snowIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	snowIsland.TextScaled = true
+	snowIsland.TextSize = 26.000
+	snowIsland.TextWrapped = true
+	snowIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1108,7,-1165)
+	end)
+
+
+	marineBaseIsland.Name = "marineBaseIsland"
+	marineBaseIsland.Parent = ScrollingFrame
+	marineBaseIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	marineBaseIsland.Position = UDim2.new(0.0615384653, 0, 0.115799889, 0)
+	marineBaseIsland.Size = UDim2.new(0, 156, 0, 36)
+	marineBaseIsland.Font = Enum.Font.SourceSans
+	marineBaseIsland.Text = "MarineBase"
+	marineBaseIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	marineBaseIsland.TextScaled = true
+	marineBaseIsland.TextSize = 26.000
+	marineBaseIsland.TextWrapped = true
+	marineBaseIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4923,41,4425)
+	end)
+
+
+	skyIsland.Name = "skyIsland"
+	skyIsland.Parent = ScrollingFrame
+	skyIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	skyIsland.Position = UDim2.new(0.0564102605, 0, 0.135677561, 0)
+	skyIsland.Size = UDim2.new(0, 156, 0, 36)
+	skyIsland.Font = Enum.Font.SourceSans
+	skyIsland.Text = "Sky"
+	skyIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	skyIsland.TextScaled = true
+	skyIsland.TextSize = 26.000
+	skyIsland.TextWrapped = true
+	skyIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4918,717,-2644)
+	end)
+
+
+	prisonIsland.Name = "prisonIsland"
+	prisonIsland.Parent = ScrollingFrame
+	prisonIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	prisonIsland.Position = UDim2.new(0.0564102605, 0, 0.15784882, 0)
+	prisonIsland.Size = UDim2.new(0, 156, 0, 36)
+	prisonIsland.Font = Enum.Font.SourceSans
+	prisonIsland.Text = "Prison"
+	prisonIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	prisonIsland.TextScaled = true
+	prisonIsland.TextSize = 26.000
+	prisonIsland.TextWrapped = true
+	prisonIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4850,5,719)
+	end)
+
+
+	magmaIsland.Name = "magmaIsland"
+	magmaIsland.Parent = ScrollingFrame
+	magmaIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	magmaIsland.Position = UDim2.new(0.0564102605, 0, 0.180020079, 0)
+	magmaIsland.Size = UDim2.new(0, 156, 0, 36)
+	magmaIsland.Font = Enum.Font.SourceSans
+	magmaIsland.Text = "Magma"
+	magmaIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	magmaIsland.TextScaled = true
+	magmaIsland.TextSize = 26.000
+	magmaIsland.TextWrapped = true
+	magmaIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5221,8,8468)
+	end)
+
+
+	fishmenIsland.Name = "fishmenIsland"
+	fishmenIsland.Parent = ScrollingFrame
+	fishmenIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	fishmenIsland.Position = UDim2.new(0.0564102605, 0, 0.201426804, 0)
+	fishmenIsland.Size = UDim2.new(0, 156, 0, 36)
+	fishmenIsland.Font = Enum.Font.SourceSans
+	fishmenIsland.Text = "Fishmen"
+	fishmenIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	fishmenIsland.TextScaled = true
+	fishmenIsland.TextSize = 26.000
+	fishmenIsland.TextWrapped = true
+	fishmenIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(61352,18,1502)
+	end)
+
+
+	fountainIsland.Name = "fountainIsland"
+	fountainIsland.Parent = ScrollingFrame
+	fountainIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	fountainIsland.Position = UDim2.new(0.0512820557, 0, 0.220539957, 0)
+	fountainIsland.Size = UDim2.new(0, 156, 0, 36)
+	fountainIsland.Font = Enum.Font.SourceSans
+	fountainIsland.Text = "Fountain"
+	fountainIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	fountainIsland.TextScaled = true
+	fountainIsland.TextSize = 26.000
+	fountainIsland.TextWrapped = true
+	fountainIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5192,38,4143)
+	end)
+
+
+	jungleIsland.Name = "jungleIsland"
+	jungleIsland.Parent = ScrollingFrame
+	jungleIsland.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	jungleIsland.Position = UDim2.new(0.051282052, 0, 0.0355246663, 0)
+	jungleIsland.Size = UDim2.new(0, 156, 0, 36)
+	jungleIsland.Font = Enum.Font.SourceSans
+	jungleIsland.Text = "Jungle"
+	jungleIsland.TextColor3 = Color3.fromRGB(255, 0, 0)
+	jungleIsland.TextScaled = true
+	jungleIsland.TextSize = 26.000
+	jungleIsland.TextWrapped = true
+	jungleIsland.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1340,11,500)
+	end)
+
+	banditAdventurer.Name = "banditAdventurer"
+	banditAdventurer.Parent = ScrollingFrame
+	banditAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	banditAdventurer.Position = UDim2.new(0.569230795, 0, 0.0164115168, 0)
+	banditAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	banditAdventurer.Font = Enum.Font.SourceSans
+	banditAdventurer.Text = "Bandit"
+	banditAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	banditAdventurer.TextScaled = true
+	banditAdventurer.TextSize = 26.000
+	banditAdventurer.TextWrapped = true
+	banditAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1059,16,1545)
+	end)
+
+	jungleAdventurer.Name = "jungleAdventurer"
+	jungleAdventurer.Parent = ScrollingFrame
+	jungleAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	jungleAdventurer.Position = UDim2.new(0.574359, 0, 0.0362891965, 0)
+	jungleAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	jungleAdventurer.Font = Enum.Font.SourceSans
+	jungleAdventurer.Text = "Jungle"
+	jungleAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	jungleAdventurer.TextScaled = true
+	jungleAdventurer.TextSize = 26.000
+	jungleAdventurer.TextWrapped = true
+	jungleAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1601,36,155)
+	end)
+
+	pirateAdventurer.Name = "pirateAdventurer"
+	pirateAdventurer.Parent = ScrollingFrame
+	pirateAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	pirateAdventurer.Position = UDim2.new(0.579487205, 0, 0.0576959252, 0)
+	pirateAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	pirateAdventurer.Font = Enum.Font.SourceSans
+	pirateAdventurer.Text = "Pirate"
+	pirateAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	pirateAdventurer.TextScaled = true
+	pirateAdventurer.TextSize = 26.000
+	pirateAdventurer.TextWrapped = true
+	pirateAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1140,4,3828) 
+	end)
+
+	desertAdventurer.Name = "desertAdventurer"
+	desertAdventurer.Parent = ScrollingFrame
+	desertAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	desertAdventurer.Position = UDim2.new(0.574359, 0, 0.0760445446, 0)
+	desertAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	desertAdventurer.Font = Enum.Font.SourceSans
+	desertAdventurer.Text = "Desert"
+	desertAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	desertAdventurer.TextScaled = true
+	desertAdventurer.TextSize = 26.000
+	desertAdventurer.TextWrapped = true
+	desertAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(895,6,4390)
+	end)
+
+	snowAdventurer.Name = "snowAdventurer"
+	snowAdventurer.Parent = ScrollingFrame
+	snowAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	snowAdventurer.Position = UDim2.new(0.574359, 0, 0.0966867507, 0)
+	snowAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	snowAdventurer.Font = Enum.Font.SourceSans
+	snowAdventurer.Text = "Snow"
+	snowAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	snowAdventurer.TextScaled = true
+	snowAdventurer.TextSize = 26.000
+	snowAdventurer.TextWrapped = true
+	snowAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1386,87,-1297)
+	end)
+
+
+	marinebaseAdventurer.Name = "marinebaseAdventurer"
+	marinebaseAdventurer.Parent = ScrollingFrame
+	marinebaseAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	marinebaseAdventurer.Position = UDim2.new(0.569230795, 0, 0.11503537, 0)
+	marinebaseAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	marinebaseAdventurer.Font = Enum.Font.SourceSans
+	marinebaseAdventurer.Text = "Marine"
+	marinebaseAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	marinebaseAdventurer.TextScaled = true
+	marinebaseAdventurer.TextSize = 26.000
+	marinebaseAdventurer.TextWrapped = true
+	marinebaseAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5036,28,4324)
+	end)
+
+	skyAdventurer.Name = "skyAdventurer"
+	skyAdventurer.Parent = ScrollingFrame
+	skyAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	skyAdventurer.Position = UDim2.new(0.569230795, 0, 0.135677576, 0)
+	skyAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	skyAdventurer.Font = Enum.Font.SourceSans
+	skyAdventurer.Text = "Sky"
+	skyAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	skyAdventurer.TextScaled = true
+	skyAdventurer.TextSize = 26.000
+	skyAdventurer.TextWrapped = true
+	skyAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4841,717,-2621)
+	end)
+
+	colesseumAdventurer.Name = "colesseumAdventurer"
+	colesseumAdventurer.Parent = ScrollingFrame
+	colesseumAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	colesseumAdventurer.Position = UDim2.new(0.579487205, 0, 0.15784882, 0)
+	colesseumAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	colesseumAdventurer.Font = Enum.Font.SourceSans
+	colesseumAdventurer.Text = "Colesseum"
+	colesseumAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	colesseumAdventurer.TextScaled = true
+	colesseumAdventurer.TextSize = 26.000
+	colesseumAdventurer.TextWrapped = true
+	colesseumAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1578,7,-2984)
+	end)
+
+	magmaAdventurer.Name = "magmaAdventurer"
+	magmaAdventurer.Parent = ScrollingFrame
+	magmaAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	magmaAdventurer.Position = UDim2.new(0.584615409, 0, 0.180784613, 0)
+	magmaAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	magmaAdventurer.Font = Enum.Font.SourceSans
+	magmaAdventurer.Text = "Magma"
+	magmaAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	magmaAdventurer.TextScaled = true
+	magmaAdventurer.TextSize = 26.000
+	magmaAdventurer.TextWrapped = true
+	magmaAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5316,12,8517)
+	end)
+
+	prisonAdventurer.Name = "prisonAdventurer"
+	prisonAdventurer.Parent = ScrollingFrame
+	prisonAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	prisonAdventurer.Position = UDim2.new(0.579487205, 0, 0.202191338, 0)
+	prisonAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	prisonAdventurer.Font = Enum.Font.SourceSans
+	prisonAdventurer.Text = "Prison"
+	prisonAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	prisonAdventurer.TextScaled = true
+	prisonAdventurer.TextSize = 26.000
+	prisonAdventurer.TextWrapped = true
+	prisonAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4854,5,744)
+	end)
+
+
+	mobBossAdventurer.Name = "mobBossAdventurer"
+	mobBossAdventurer.Parent = ScrollingFrame
+	mobBossAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	mobBossAdventurer.Position = UDim2.new(0.574359, 0, 0.220539957, 0)
+	mobBossAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	mobBossAdventurer.Font = Enum.Font.SourceSans
+	mobBossAdventurer.Text = "Mob Boss"
+	mobBossAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	mobBossAdventurer.TextScaled = true
+	mobBossAdventurer.TextSize = 26.000
+	mobBossAdventurer.TextWrapped = true
+	mobBossAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2844,7,5328)
+	end)
+
+	fountainAdventurer.Name = "fountainAdventurer"
+	fountainAdventurer.Parent = ScrollingFrame
+	fountainAdventurer.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	fountainAdventurer.Position = UDim2.new(0.574359, 0, 0.239653111, 0)
+	fountainAdventurer.Size = UDim2.new(0, 156, 0, 36)
+	fountainAdventurer.Font = Enum.Font.SourceSans
+	fountainAdventurer.Text = "Fountain"
+	fountainAdventurer.TextColor3 = Color3.fromRGB(255, 0, 0)
+	fountainAdventurer.TextScaled = true
+	fountainAdventurer.TextSize = 26.000
+	fountainAdventurer.TextWrapped = true
+	fountainAdventurer.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5256,38,4051)
+	end)
+
+	TextLabel3.Name = "TextLabel3"
+	TextLabel3.Parent = ScrollingFrame
+	TextLabel3.BackgroundColor3 = Color3.fromRGB(200, 255, 110)
+	TextLabel3.Position = UDim2.new(0.30769226, 0, 0.0084951967, 0)
+	TextLabel3.Size = UDim2.new(0, 180, 0, 16)
+	TextLabel3.Font = Enum.Font.SourceSans
+	TextLabel3.Text = "NPCs"
+	TextLabel3.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel3.TextSize = 14.000
+
+	banditNPC.Name = "banditNPC"
+	banditNPC.Parent = ScrollingFrame
+	banditNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	banditNPC.Position = UDim2.new(0.323076934, 0, 0.0164115168, 0)
+	banditNPC.Size = UDim2.new(0, 156, 0, 36)
+	banditNPC.Font = Enum.Font.SourceSans
+	banditNPC.Text = "Bandit"
+	banditNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	banditNPC.TextScaled = true
+	banditNPC.TextSize = 26.000
+	banditNPC.TextWrapped = true
+	banditNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Bandit [Lv. 5]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+	end)
+
+	monkeyNPC.Name = "monkeyNPC"
+	monkeyNPC.Parent = ScrollingFrame
+	monkeyNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	monkeyNPC.Position = UDim2.new(0.333333343, 0, 0.0347601399, 0)
+	monkeyNPC.Size = UDim2.new(0, 156, 0, 36)
+	monkeyNPC.Font = Enum.Font.SourceSans
+	monkeyNPC.Text = "Monkey"
+	monkeyNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	monkeyNPC.TextScaled = true
+	monkeyNPC.TextSize = 26.000
+	monkeyNPC.TextWrapped = true
+	monkeyNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Monkey [Lv. 14]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+	end)
+
+	gorillaNPC.Name = "gorillaNPC"
+	gorillaNPC.Parent = ScrollingFrame
+	gorillaNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	gorillaNPC.Position = UDim2.new(0.333333343, 0, 0.0546378158, 0)
+	gorillaNPC.Size = UDim2.new(0, 156, 0, 36)
+	gorillaNPC.Font = Enum.Font.SourceSans
+	gorillaNPC.Text = "Gorilla"
+	gorillaNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	gorillaNPC.TextScaled = true
+	gorillaNPC.TextSize = 26.000
+	gorillaNPC.TextWrapped = true
+	gorillaNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Gorilla [Lv. 20]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+	end)
+
+
+	pirateNPC.Name = "pirateNPC"
+	pirateNPC.Parent = ScrollingFrame
+	pirateNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	pirateNPC.Position = UDim2.new(0.333333343, 0, 0.0775735974, 0)
+	pirateNPC.Size = UDim2.new(0, 156, 0, 36)
+	pirateNPC.Font = Enum.Font.SourceSans
+	pirateNPC.Text = "Pirate"
+	pirateNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	pirateNPC.TextScaled = true
+	pirateNPC.TextSize = 26.000
+	pirateNPC.TextWrapped = true
+	pirateNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Pirate [Lv. 35]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+	end)
+
+
+	bruteNPC.Name = "bruteNPC"
+	bruteNPC.Parent = ScrollingFrame
+	bruteNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	bruteNPC.Position = UDim2.new(0.333333343, 0, 0.0989803225, 0)
+	bruteNPC.Size = UDim2.new(0, 156, 0, 36)
+	bruteNPC.Font = Enum.Font.SourceSans
+	bruteNPC.Text = "Brute"
+	bruteNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	bruteNPC.TextScaled = true
+	bruteNPC.TextSize = 26.000
+	bruteNPC.TextWrapped = true
+	bruteNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Brute [Lv. 45]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+
+	desertBanditNPC.Name = "desertBanditNPC"
+	desertBanditNPC.Parent = ScrollingFrame
+	desertBanditNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	desertBanditNPC.Position = UDim2.new(0.333333343, 0, 0.116564423, 0)
+	desertBanditNPC.Size = UDim2.new(0, 156, 0, 36)
+	desertBanditNPC.Font = Enum.Font.SourceSans
+	desertBanditNPC.Text = "Desert Bandit"
+	desertBanditNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	desertBanditNPC.TextScaled = true
+	desertBanditNPC.TextSize = 26.000
+	desertBanditNPC.TextWrapped = true
+	desertBanditNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Desert Bandit [Lv. 60]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+
+	desertOffficerNPC.Name = "desertOffficerNPC"
+	desertOffficerNPC.Parent = ScrollingFrame
+	desertOffficerNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	desertOffficerNPC.Position = UDim2.new(0.333333343, 0, 0.137206629, 0)
+	desertOffficerNPC.Size = UDim2.new(0, 156, 0, 36)
+	desertOffficerNPC.Font = Enum.Font.SourceSans
+	desertOffficerNPC.Text = "Desert Officer"
+	desertOffficerNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	desertOffficerNPC.TextScaled = true
+	desertOffficerNPC.TextSize = 26.000
+	desertOffficerNPC.TextWrapped = true
+	desertOffficerNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Desert Officer [Lv. 70]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+
+	skyBanditNPC.Name = "skyBanditNPC"
+	skyBanditNPC.Parent = ScrollingFrame
+	skyBanditNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	skyBanditNPC.Position = UDim2.new(0.333333343, 0, 0.157084301, 0)
+	skyBanditNPC.Size = UDim2.new(0, 156, 0, 36)
+	skyBanditNPC.Font = Enum.Font.SourceSans
+	skyBanditNPC.Text = "Sky Bandit"
+	skyBanditNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	skyBanditNPC.TextScaled = true
+	skyBanditNPC.TextSize = 26.000
+	skyBanditNPC.TextWrapped = true
+	skyBanditNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Sky Bandit [Lv. 150]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+	darkMasterNPC.Name = "darkMasterNPC"
+	darkMasterNPC.Parent = ScrollingFrame
+	darkMasterNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	darkMasterNPC.Position = UDim2.new(0.333333343, 0, 0.17925556, 0)
+	darkMasterNPC.Size = UDim2.new(0, 156, 0, 36)
+	darkMasterNPC.Font = Enum.Font.SourceSans
+	darkMasterNPC.Text = "Dark Master"
+	darkMasterNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	darkMasterNPC.TextScaled = true
+	darkMasterNPC.TextSize = 26.000
+	darkMasterNPC.TextWrapped = true
+	darkMasterNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Dark Master [Lv. 175]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+	togaWarriorNPC.Name = "togaWarriorNPC"
+	togaWarriorNPC.Parent = ScrollingFrame
+	togaWarriorNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	togaWarriorNPC.Position = UDim2.new(0.333333343, 0, 0.199133232, 0)
+	togaWarriorNPC.Size = UDim2.new(0, 156, 0, 36)
+	togaWarriorNPC.Font = Enum.Font.SourceSans
+	togaWarriorNPC.Text = "Toga Warrior"
+	togaWarriorNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	togaWarriorNPC.TextScaled = true
+	togaWarriorNPC.TextSize = 26.000
+	togaWarriorNPC.TextWrapped = true
+	togaWarriorNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Toga Warrior [Lv. 225]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+	gladiatorNPC.Name = "gladiatorNPC"
+	gladiatorNPC.Parent = ScrollingFrame
+	gladiatorNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	gladiatorNPC.Position = UDim2.new(0.333333343, 0, 0.220539957, 0)
+	gladiatorNPC.Size = UDim2.new(0, 156, 0, 36)
+	gladiatorNPC.Font = Enum.Font.SourceSans
+	gladiatorNPC.Text = "Gladiator"
+	gladiatorNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	gladiatorNPC.TextScaled = true
+	gladiatorNPC.TextSize = 26.000
+	gladiatorNPC.TextWrapped = true
+	gladiatorNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Gladiator [Lv. 275]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+	militarySoldierNPC.Name = "militarySoldierNPC"
+	militarySoldierNPC.Parent = ScrollingFrame
+	militarySoldierNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	militarySoldierNPC.Position = UDim2.new(0.333333343, 0, 0.241182163, 0)
+	militarySoldierNPC.Size = UDim2.new(0, 156, 0, 36)
+	militarySoldierNPC.Font = Enum.Font.SourceSans
+	militarySoldierNPC.Text = "Military Soldier"
+	militarySoldierNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	militarySoldierNPC.TextScaled = true
+	militarySoldierNPC.TextSize = 26.000
+	militarySoldierNPC.TextWrapped = true
+	militarySoldierNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Military Soldier [Lv. 300]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+	end)
+
+
+	militarySpyNPC.Name = "militarySpyNPC"
+	militarySpyNPC.Parent = ScrollingFrame
+	militarySpyNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	militarySpyNPC.Position = UDim2.new(0.333333343, 0, 0.26105985, 0)
+	militarySpyNPC.Size = UDim2.new(0, 156, 0, 36)
+	militarySpyNPC.Font = Enum.Font.SourceSans
+	militarySpyNPC.Text = "Military Spy"
+	militarySpyNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	militarySpyNPC.TextScaled = true
+	militarySpyNPC.TextSize = 26.000
+	militarySpyNPC.TextWrapped = true
+	militarySpyNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Military Spy [Lv. 330]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+
+	godsGuardNPC.Name = "godsGuardNPC"
+	godsGuardNPC.Parent = ScrollingFrame
+	godsGuardNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	godsGuardNPC.Position = UDim2.new(0.333333343, 0, 0.280173004, 0)
+	godsGuardNPC.Size = UDim2.new(0, 156, 0, 36)
+	godsGuardNPC.Font = Enum.Font.SourceSans
+	godsGuardNPC.Text = "God's Guard"
+	godsGuardNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	godsGuardNPC.TextScaled = true
+	godsGuardNPC.TextSize = 26.000
+	godsGuardNPC.TextWrapped = true
+	godsGuardNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("God's Guard [Lv. 450]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+
+	shandaNPC.Name = "shandaNPC"
+	shandaNPC.Parent = ScrollingFrame
+	shandaNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	shandaNPC.Position = UDim2.new(0.333333343, 0, 0.299286157, 0)
+	shandaNPC.Size = UDim2.new(0, 156, 0, 36)
+	shandaNPC.Font = Enum.Font.SourceSans
+	shandaNPC.Text = "Shanda"
+	shandaNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	shandaNPC.TextScaled = true
+	shandaNPC.TextSize = 26.000
+	shandaNPC.TextWrapped = true
+	shandaNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Shanda [Lv. 475]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+		
+	end)
+
+
+	galleyPirateNPC.Name = "galleyPirateNPC"
+	galleyPirateNPC.Parent = ScrollingFrame
+	galleyPirateNPC.BackgroundColor3 = Color3.fromRGB(193, 255, 175)
+	galleyPirateNPC.Position = UDim2.new(0.333333343, 0, 0.319163829, 0)
+	galleyPirateNPC.Size = UDim2.new(0, 156, 0, 36)
+	galleyPirateNPC.Font = Enum.Font.SourceSans
+	galleyPirateNPC.Text = "Galley Pirate"
+	galleyPirateNPC.TextColor3 = Color3.fromRGB(255, 0, 0)
+	galleyPirateNPC.TextScaled = true
+	galleyPirateNPC.TextSize = 26.000
+	galleyPirateNPC.TextWrapped = true
+	galleyPirateNPC.MouseButton1Down:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace"):WaitForChild("Enemies"):FindFirstChild("Galley Pirate [Lv. 625]").HumanoidRootPart.CFrame + Vector3.new(2,0,2)
+	end)
+
