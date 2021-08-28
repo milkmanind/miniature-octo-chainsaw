@@ -1,0 +1,118 @@
+getgenv().autoServerGoku = true
+getgenv().autoFarmGoku = true
+
+local repStorage = game:GetService("ReplicatedStorage")
+
+function getCurrentPlayerPOS()
+    local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+     return plyr.Character.HumanoidRootPart.Position
+    end
+    return false
+end 
+
+function teleportTO(placeCFrame)
+    local plyr = game.Players.LocalPlayer
+        if plyr.Character then
+            plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+    end
+end
+
+function teleportWorld(world)
+    if game:GetService("Workspace").Map.Islands:FindFirstChild(world) then
+        teleportTO(game:GetService("Workspace").Map.Islands[world].Part.CFrame)
+    end
+end
+function atelportGoku() 
+       while getgenv().autoServerGoku == true do
+            local args = {
+                [1] = 1,
+                [2] = {
+                    ["ModelName"] = "Goku",
+                    ["Messages"] = {
+                        [1] = {
+                            ["Delay"] = 3,
+                            ["Text"] = "Hey! It's me, Goku!"
+                        },
+                        [2] = {
+                            ["Delay"] = 3,
+                            ["Text"] = "Say... I'm kinda bored."
+                        },
+                        [3] = {
+                            ["Responses"] = {
+                                [1] = {
+                                    [1] = "Sure!",
+                                    [2] = true
+                                },
+                                [2] = {
+                                    [1] = "Not right now!",
+                                    [2] = false
+                                }
+                            },
+                            ["Text"] = "Oh I know!! Would you like to spar with me?"
+                        }
+                    },
+                    ["Name"] = "Goku",
+                    ["OnCompleted"] = function()end --[[function: 0x000000001a100333]]
+                }
+            }
+            
+          repStorage.Remote.Battle:FireServer(unpack(args))
+                 wait()
+                end
+            end
+function aTransfomGoku()
+    local args = {
+                [1] = "Transform",
+                [2] = true,
+                [3] = "Normal"
+            }
+          repStorage.Remote.Mode:InvokeServer(unpack(args))
+                wait()             
+end
+
+function doFarmGoku()
+    while true do
+        if game:GetService("Players").LocalPlayer.Character then 
+            if game:GetService("Workspace").Goku.Humanoid.Health >= 0 then
+               game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Goku.HumanoidRootPart.CFrame + Vector3.new(0,0,1)
+                 game:GetService("ReplicatedStorage").Remotes.Training.Combat:InvokeServer()
+                 wait()
+            end
+        end
+    end
+end
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("Dragon Ball Rage UI")
+
+local b = w:CreateFolder("Teport Map")
+
+local c = w:CreateFolder("Teport Goku Server")
+
+local d  = w:CreateFolder("Farm Goku")
+
+local selectedWorld
+b:Dropdown("Islands",{"Tournament","Volcano","Mountains","IceIsland","DesertWoods","Forest","Plains"},true,function(value) --true/false, replaces the current title "Dropdown" with the option that t
+    selectedWorld = value
+    print(value)
+end)
+b:Button("Teleport Selected",function()
+    if selectedWorld then
+        teleportWorld(selectedWorld)
+    end
+end)
+c:Button("Teleport Goku Server",function()
+      atelportGoku()
+end)
+d:Button("Transform", function()
+    aTransfomGoku()  
+end)
+d:Button("Autofarm Goku",function()
+    doFarmGoku()
+end)
+d:DestroyGui()
+print("Final")
+
+
