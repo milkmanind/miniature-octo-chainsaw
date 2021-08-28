@@ -1,0 +1,119 @@
+-- TELEPORT BYPASS
+if game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Comm") then
+    game:GetService("Players").LocalPlayer.PlayerScripts["Comm"].Disabled = true
+end
+print("Comm disabled")
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Movement") then
+    game:GetService("Players").LocalPlayer.Character["Movement"].Disabled = true
+end
+print("Momement disabled")
+
+-- VARIABLES
+local mobs = {} --Mobs Table
+getgenv().mob = nil --Selected Mob 
+-- MOBS
+for _,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do -- Loops through all the Mobs
+    insert = true --Value to check the Mob
+        for _, v2 in pairs(mobs) do
+            if v2 == v.Name then
+            insert = false
+        end
+    end
+if insert then
+            table.insert(mobs, v.Name)
+    end
+end 
+
+-- UI LIBRARY
+local Library = loadstring(game:HttpGet("https:/raw.githubusercontent.com/Attrixx/Scandia/main/KavoUiLib.lua"))()
+local Window = Library.CreateLib("Blox Fruit Autofarm", "Sentinel")
+
+local afarm = Window:NewTab("Autofarm")
+local tp = Window:NewTab("Teleport")
+
+local MobFarmSection  = afarm:NewSection("Mob Section")
+local MobTeleportSection = tp:NewSection("Mob Teleport")
+
+-- MAIN
+
+local mobdropdown = MobFarmSection:NewDropdown("Choose Mob","Chooses the Mob to autofarm", mobs, function(v)
+    getgenv().mob = v
+end)
+
+MobFarmSection:NewToggle("Start Mob Farm", "Toogles the autofarming for the mob", function(v)
+    getgenv().autofarmmobs = v
+    while wait() do
+        if getgenv().autofarmmobs == false then
+            return end --if the toogle if off then it will turn off
+        if getgenv().mob == nil then --if the mob isn't selected
+            game.StarterGui:SetCore("Send Notification", {
+                Title = "Error!",
+                Text = "You havent selected a NPC with the dropdown above \n Untoggle this toggle!",
+                Icon = "",
+                Durection = 2.5
+            })
+            getgenv().autofarmmobs = false
+            return end
+            print("48")
+        local mob = game:GetService("Workspace").Enemies:FindFirstChild(getgenv().mob)
+            if mob == nil then
+                game.StarterGui:SetCore("Send Notificaiton", {
+                Title = "Error!",
+                Text = "There are currently no Mob of this type, wait till they spawn.",
+                Icon = "",
+                Duration = 2.5
+                })
+                while wait() do
+                    if getgenv().autofarmmobs == false then --If the toogle if off then it stops the loop
+                        return end
+                        if game:GetService("Workspace").Enemies:FindFirstChild(getgenv().mob) ~= nil then -- if the mob exist then go with the autofarm
+                            break end
+                 end
+            else
+              local mob2 = mob
+              while wait() do
+                    mob = game:GetService("Workspace").Enemies:FindFirstChild(getgenv().mob)
+                if mob ~= mob2 then
+                    break end
+                if getgenv().autofarmmobs == false then --stops the loop when toogle if off
+                    return end
+                    if mob ~= nil then
+                        if mob:FindFirstChild('Humanoid') then
+                            if mob.Humanoid.Health == 0 then
+                                wait(0.1)
+                                mob:Destroy()
+                                break end
+                            end
+                        if mob:FindFirstChild("HumanoidRootPart") then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = mob.HumanoidRootPart.CFrame * CFrame.new(0,0,2) -- TELEPORT TO THE MOB
+                        end
+                    end
+        end
+      end
+    end
+end)
+
+-- UPDATING THE MOBS
+game:GetService("Workspace").Enemies.ChildAdded:Connect(function() -- WHEN MOB SPAWNS
+    for _,v2 in pairs(mobs) do 
+        table.remove(mobs, _) 
+    end -- REMOVES ALL THE OLD MOBS
+    -- ADDS THE NEW MOBS
+    for _,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do -- LOOPS THROUGH ALL MOBS
+        insert = true -- VALUE TO CHECK THE MOB
+        for _,v2 in pairs(mobs) do if v2 == v.Name then insert = false end end -- CHECKS IF MOB IS ALREADY IN THE TABLE
+        if insert then table.insert(mobs, v.Name) end -- IF THE MOB ISNT INSERTED THEN INSERT IT
+    end
+    mobdropdown:Refresh(mobs)
+end)
+
+game:GetService("Workspace").Enemies.ChildRemoved:Connect(function() -- WHEN MOB DIES / GETS REMOVED
+    for _,v2 in pairs(mobs) do table.remove(mobs, _) end -- REMOVES ALL THE OLD MOBS
+    -- ADDS THE NEW MOBS
+    for _,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do -- LOOPS THROUGH ALL MOBS
+        insert = true -- VALUE TO CHECK THE MOB
+        for _,v2 in pairs(mobs) do if v2 == v.Name then insert = false end end -- CHECKS IF MOB IS ALREADY IN THE TABLE
+        if insert then table.insert(mobs, v.Name) end -- IF THE MOB ISNT INSERTED THEN INSERT I
+    end
+    mobdropdown:Refresh(mobs)
+end)
